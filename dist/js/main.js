@@ -54,32 +54,68 @@ __webpack_require__.r(__webpack_exports__);
 function initSwiper() {
   var shopsSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".shopSwiper", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
       nextEl: ".arrow-hidden-next_shops",
       prevEl: ".arrow-hidden-prev_shops"
+    },
+    breakpoints: {
+      // when window width is >= 480px
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
   var enterSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".enterSwiper", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
       nextEl: ".arrow-hidden-next_enter",
       prevEl: ".arrow-hidden-prev_enter"
+    },
+    breakpoints: {
+      // when window width is >= 480px
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
   var foodSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".foodSwiper", {
     spaceBetween: 10,
-    slidesPerView: 3,
+    slidesPerView: 1,
     freeMode: true,
     watchSlidesProgress: true,
     navigation: {
       nextEl: ".arrow-hidden-next_food",
       prevEl: ".arrow-hidden-prev_food"
+    },
+    breakpoints: {
+      // when window width is >= 480px
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
 }

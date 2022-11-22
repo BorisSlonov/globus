@@ -4,6 +4,12 @@
     }
 }
 
+.allPlacesTabs__titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .allPlacesTabs__title_active {
     background-color: #000;
     .allPlaces__span {
