@@ -6,9 +6,25 @@
     gap: 15px;
     transition: all .3s;
     white-space: nowrap;
+    border-radius: 32px;
+
+    &__icon {
+        max-width: 18px;
+    }
 
     &:hover {
         opacity: 1;
+    }
+
+    &_gray {
+        background-color: #F5F7FA;
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid #F5F7FA;
+        &:hover {
+            border: 1px solid var(--black);
+        }
     }
 
     &_black {
@@ -16,7 +32,6 @@
         background-color: var(--black);
         color: #fff;
         border: 1px solid var(--black);
-        border-radius: 32px;
         font-weight: 600;
 
         &:hover {
@@ -29,7 +44,6 @@
         color: var(--blue);
         border: 1px solid rgba(0, 119, 255, 0.24);
         padding: 8px 16px;
-        border-radius: 32px;
 
         &:hover {
             color: #fff;

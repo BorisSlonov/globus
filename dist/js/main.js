@@ -44,16 +44,53 @@ if (checkAccordion) {
 /*!***************************************************!*\
   !*** ./src/blocks/modules/allPlaces/allPlaces.js ***!
   \***************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-modules.define('allPlaces', ['i-bem-dom'], function (provide, bemDom) {
-  provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-      js: {
-        inited: function inited() {}
-      }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+
+
+function initSwiper() {
+  var shopsSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".shopSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".arrow-hidden-next_shops",
+      prevEl: ".arrow-hidden-prev_shops"
     }
-  }));
+  });
+  var enterSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".enterSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".arrow-hidden-next_enter",
+      prevEl: ".arrow-hidden-prev_enter"
+    }
+  });
+  var foodSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".foodSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".arrow-hidden-next_food",
+      prevEl: ".arrow-hidden-prev_food"
+    }
+  });
+}
+
+initSwiper();
+document.querySelectorAll('.allPlacesTabs__title').forEach(function (i) {
+  i.addEventListener('click', function () {
+    setTimeout(function () {
+      initSwiper();
+    }, "500");
+  });
 });
 
 /***/ }),
@@ -62,17 +99,39 @@ modules.define('allPlaces', ['i-bem-dom'], function (provide, bemDom) {
 /*!*********************************************!*\
   !*** ./src/blocks/modules/cinema/cinema.js ***!
   \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+
+var mySwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+var mySwiper2 = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper2", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next_cinema",
+    prevEl: ".swiper-button-prev_cinema"
+  },
+  thumbs: {
+    swiper: mySwiper
+  }
+});
+
+/***/ }),
+
+/***/ "./src/blocks/modules/datePicker/datePicker.js":
+/*!*****************************************************!*\
+  !*** ./src/blocks/modules/datePicker/datePicker.js ***!
+  \*****************************************************/
 /***/ (() => {
 
-modules.define('cinema', ['i-bem-dom'], function (provide, bemDom) {
-  provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-      js: {
-        inited: function inited() {}
-      }
-    }
-  }));
-});
+
 
 /***/ }),
 
@@ -188,7 +247,6 @@ window.onload = function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 
-2;
 var swiperMain = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.main-slider', {
   slidesPerView: 1,
   // If we need pagination
@@ -200,6 +258,28 @@ var swiperMain = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.mai
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
+  }
+});
+swiperMain.on('slideChange', function (e) {
+  var sectionPageFirst = document.querySelector('.section-page1');
+  console.log(swiperMain.activeIndex);
+
+  if (swiperMain.activeIndex == 0) {
+    sectionPageFirst.classList.remove('section-page1_1');
+    sectionPageFirst.classList.remove('section-page1_2');
+    sectionPageFirst.classList.add('section-page1_0');
+  }
+
+  if (swiperMain.activeIndex == 1) {
+    sectionPageFirst.classList.remove('section-page1_0');
+    sectionPageFirst.classList.remove('section-page1_2');
+    sectionPageFirst.classList.add('section-page1_1');
+  }
+
+  if (swiperMain.activeIndex == 2) {
+    sectionPageFirst.classList.remove('section-page1_0');
+    sectionPageFirst.classList.remove('section-page1_1');
+    sectionPageFirst.classList.add('section-page1_2');
   }
 });
 
@@ -302,6 +382,33 @@ var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeCla
         }
       });
     }
+
+    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
+      document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
+      document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops');
+    }
+
+    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
+      document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
+      document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter');
+    }
+
+    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
+      document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
+      document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
+      document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
+      document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food');
+    }
   });
 };
 
@@ -340,11 +447,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/accordion/accordion */ "./src/blocks/modules/accordion/accordion.js");
 /* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_cinema_cinema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/cinema/cinema */ "./src/blocks/modules/cinema/cinema.js");
-/* harmony import */ var _modules_cinema_cinema__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_cinema_cinema__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/allPlaces/allPlaces */ "./src/blocks/modules/allPlaces/allPlaces.js");
-/* harmony import */ var _modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/datePicker/datePicker */ "./src/blocks/modules/datePicker/datePicker.js");
+/* harmony import */ var _modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/allPlaces/allPlaces */ "./src/blocks/modules/allPlaces/allPlaces.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 

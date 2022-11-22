@@ -1,0 +1,14 @@
+.allPlaces__span {
+    &:last-child {
+        color: rgba(128, 128, 128, 1);
+    }
+}
+
+.allPlacesTabs__title_active {
+    background-color: #000;
+    .allPlaces__span {
+        &:first-child {
+            color: #fff;
+        }
+    }
+}
