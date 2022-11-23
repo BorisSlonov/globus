@@ -1,0 +1,47 @@
+.page-contacts {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+
+    @media(max-width:767px) {
+        flex-direction: column;
+    }
+
+    &__item {
+        &:first-child {
+            flex-basis: 30%;
+        }
+
+        &:last-child {
+            flex-basis: 70%;
+        }
+    }
+}
+
+.contacts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__img {
+        width: 48px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__span {
+        &:first-child {
+            font-size: 14px;
+            color: #808080;
+        }
+    }
+}

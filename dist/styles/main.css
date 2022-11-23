@@ -816,6 +816,43 @@ a:hover {
   max-width: 1980px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 16px;
+}
+
+.h1 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+
+.h1__sub {
+  max-width: 800px;
+  margin-top: 15px;
+}
+
+.section-page1 {
+  padding-top: 50px;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.section-page1_0 {
+  background-image: url("../img/main-slider/bg.webp");
+}
+
+.section-page1_1 {
+  background-image: url("../img/main-slider/bg2.webp");
+}
+
+.section-page1_2 {
+  background-image: url("../img/main-slider/bg3.webp");
+}
+
+.section-page1_sub {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  background-image: url("../img/subpages-title-bg.webp");
+  background-size: cover;
 }
 
 .main-h2-wrapper {
@@ -2014,30 +2051,6 @@ background- .main-btn_green:hover {
   margin-top: 15px;
 }
 
-.h1 {
-  font-size: 56px;
-  line-height: 1.2;
-}
-
-.section-page1 {
-  padding-top: 50px;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 0.5s ease-in-out;
-  transition: background-image 0.5s ease-in-out;
-}
-
-.section-page1_0 {
-  background-image: url("../img/main-slider/bg.webp");
-}
-
-.section-page1_1 {
-  background-image: url("../img/main-slider/bg2.webp");
-}
-
-.section-page1_2 {
-  background-image: url("../img/main-slider/bg3.webp");
-}
-
 .news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -2075,6 +2088,7 @@ background- .main-btn_green:hover {
   position: relative;
   background-color: #F5F7FA;
   max-width: 420px;
+  height: 100%;
   border-radius: 15px;
 }
 
@@ -2298,6 +2312,14 @@ img.cinema-sub-card__img {
   gap: 10px;
 }
 
+.allPlacesTabs__title {
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .allPlacesTabs__title_active {
   background-color: #000;
 }
@@ -2383,6 +2405,56 @@ img.cinema-sub-card__img {
   display: flex;
   gap: 15px;
   margin-top: 30px;
+}
+
+.section-grid-items {
+  padding: 60px 0;
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.page-contacts {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+
+.page-contacts__item:first-child {
+  flex-basis: 30%;
+}
+
+.page-contacts__item:last-child {
+  flex-basis: 70%;
+}
+
+.contacts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts-grid__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-grid__img {
+  width: 48px;
+}
+
+.contacts-grid__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-grid__span:first-child {
+  font-size: 14px;
+  color: #808080;
 }
 
 .accordion {
@@ -2740,6 +2812,10 @@ img.cinema-sub-card__img {
 }
 
 @media (max-width: 1023px) {
+  .h1 {
+    font-size: 32px;
+  }
+
   .main-menu__contacts-mob {
     width: 100%;
   }
@@ -2929,10 +3005,6 @@ img.cinema-sub-card__img {
     max-width: 100%;
   }
 
-  .h1 {
-    font-size: 32px;
-  }
-
   .onlineServices__body {
     flex-direction: column;
     max-width: 620px;
@@ -3063,6 +3135,10 @@ img.cinema-sub-card__img {
 
   .cinema-card-form__item {
     flex-wrap: wrap;
+  }
+
+  .page-contacts {
+    flex-direction: column;
   }
 
   .accordion_mt50 {

@@ -94,30 +94,4 @@
     }
 }
 
-.h1 {
-    font-size: 56px;
-    line-height: 1.2;
 
-    @media(max-width:1023px) {
-        font-size: 32px;
-    }
-}
-
-.section-page1 {
-    padding-top: 50px;
-    background-repeat: no-repeat;
-    -webkit-transition: background-image 0.5s ease-in-out;
-    transition: background-image 0.5s ease-in-out;
-
-    &_0 {
-        background-image: url('../img/main-slider/bg.webp');
-    }
-
-    &_1 {
-        background-image: url('../img/main-slider/bg2.webp');
-    }
-
-    &_2 {
-        background-image: url('../img/main-slider/bg3.webp');
-    }
-}

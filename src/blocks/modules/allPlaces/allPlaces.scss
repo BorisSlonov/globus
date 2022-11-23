@@ -10,8 +10,17 @@
     gap: 10px;
 }
 
+.allPlacesTabs__title {
+    cursor: pointer;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .allPlacesTabs__title_active {
     background-color: #000;
+
     .allPlaces__span {
         &:first-child {
             color: #fff;
