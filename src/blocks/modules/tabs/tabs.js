@@ -35,37 +35,6 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
         }
       });
     }
-
-    if (document.querySelector('.arrow-hidden-prev_shops')) {
-      if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
-        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops')
-
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
-        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops')
-      }
-      if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
-        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter')
-
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
-        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter')
-      }
-      if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
-        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
-        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food')
-
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
-        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
-        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food')
-      }
-    }
-
   });
 
 };

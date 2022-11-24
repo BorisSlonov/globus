@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>globus</title>
+    <meta name="description" content="Дизайн, верстка и программирование сайтов. Продвижение, реклама в интернете">
+    <meta name="keywords" content="Дизайн, Верстка, Front-end, Back-end, Разработка, Лэндинг, Продвижение, Реклама">
+    <meta name="author" content="Boris Slonov">
+    <meta name="theme-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="body scroll-block">
+    <div class="main-wrapper">
+        <header class="header">
+  <div class="container">
+    <div class="header__body">
+      <!-- logo -->
+      <a href="/" class="header__logo">
+        <img src="img/logo.svg" width="200" height="48" alt="логотип">
+      </a>
+      <!-- burger -->
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- navigation -->
+      <nav class="header__menu">
+        <!-- header__list -->
+        <div class="main-menu">
+          <div class="header__list">
+            <ul class="main-menu__list">
+              <li class="main-menu__li">
+                <a href="#about-us" class="header__link link-hover"> Магазины </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#services" class="header__link link-hover"> Развлечения </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#portfolio" class="header__link link-hover">
+                  Еда
+                </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#contacts" class="header__link link-hover"> Новости и акции </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#portfolio" class="header__link link-hover">
+                  Аренда
+                </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#portfolio" class="header__link link-hover">
+                  Реклама
+                </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#portfolio" class="header__link link-hover">
+                  О нас
+                </a>
+              </li>
+              <li class="main-menu__li">
+                <a href="#portfolio" class="header__link link-hover">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <div class="main-menu__contacts-mob">
+              <div class="main-menu__contacts-mob-phone">
+                <ul class="nav-list">
+                  <li>
+                    <a href="#" class="nav-list__a">
+                      <img src="img/sprites/i-map.svg" width="22" height="22" alt="иконка карты">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-list__a">
+                      <img src="img/sprites/i-path.svg" width="22" height="22" alt="иконка маршрут">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-list__a">
+                      <img src="img/sprites/i-clock.svg" width="22" height="22" alt="иконка часы">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- call -->
+      <div class="header__login-wrapper">
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="nav-list__a">
+              <img src="img/sprites/i-map.svg" width="22" height="22" alt="иконка карты">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-list__a">
+              <img src="img/sprites/i-path.svg" width="22" height="22" alt="иконка маршрут">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-list__a">
+              <img src="img/sprites/i-clock.svg" width="22" height="22" alt="иконка часы">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+        ﻿<main class="main">
+    <section class="section-page1 section-page1_sub">
+        <div class="container">
+            <h1 class="h1">
+                Главный семейный на юго-западе
+            </h1>
+            <p class="h1__sub">
+                Один из самых больших и удобных торговых центров города Кирова! Это идеальное место
+                для совершения выгодных покупок, развлечения и отдыха всей семьёй.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section section_singlePlace">
+        <div class="container">
+            <div class="singlePlace">
+                <div class="singlePlace__item">
+                    <div class="singlePlaceCard">
+                        <div class="onlineServices__item onlineServices-card onlineServices-card_gray-bg">
+                            <div class="onlineServices-card__top">
+                                <picture>
+                                    <source srcset="img/services/2.webp">
+                                    <img width="420" height="310" src="img/services/2.jpg" alt="онлайн-сервис"
+                                        class="onlineServices__bg">
+                                </picture>
+                                <picture>
+                                    <source srcset="img/services/2-logo.webp">
+                                    <img width="96" height="96" src="img/services/2-logo.jpg"
+                                        alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                </picture>
+                            </div>
+                            <div class="onlineServices-card__content">
+                                <h3 class="onlineServices__h3">
+                                    Kari Kids
+                                </h3>
+                                <div class="onlineServices__tips onlineServices__tips_gray">
+                                    Детская одежда, детские товары
+                                </div>
+                                <div class="singlePlaceCard__tips">
+                                    <div class="singlePlaceCard__tip">
+                                        <img width="48" height="48" src="img/contacts-icons/tel.svg" class="singlePlaceCard__img" alt="иконка">
+                                        <div class="singlePlaceCard__texts">
+                                            <a href="tel:+7(8332)44-99-51"
+                                                class="singlePlaceCard__a singlePlaceCard__text">
+                                                +7 (8332) 44-99-51
+                                            </a>
+                                            <span class="singlePlaceCard__text">
+                                                Телефон
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="singlePlaceCard__tip">
+                                        <img  width="48" height="48" src="img/contacts-icons/time.svg" class="singlePlaceCard__img" alt="иконка">
+                                        <div class="singlePlaceCard__texts">
+                                            <span class="singlePlaceCard__text">
+                                                09:00 - 21:00
+                                            </span>
+                                            <span class="singlePlaceCard__text">
+                                                Режим работы
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="singlePlaceCard__tip">
+                                        <img width="48" height="48"  src="img/contacts-icons/plan.svg" class="singlePlaceCard__img" alt="иконка">
+                                        <div class="singlePlaceCard__texts">
+                                            <span class="singlePlaceCard__text">
+                                                ТРЦ · 2 этаж
+                                            </span>
+                                            <a href="#"
+                                                class="singlePlaceCard__a singlePlaceCard__a_blue singlePlaceCard__text">
+                                                Показать на схеме
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="singlePlaceCard__tip">
+                                        <img width="48" height="48"  src="img/contacts-icons/link.svg" class="singlePlaceCard__img" alt="иконка">
+                                        <div class="singlePlaceCard__texts">
+                                            <a href="mailto:kari-kids.ru"
+                                                class="singlePlaceCard__a singlePlaceCard__text">
+                                                kari-kids.ru
+                                            </a>
+                                            <span class="singlePlaceCard__text">
+                                                Сайт
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="singlePlace__item">
+                    <div class="allPlaces allPlacesTabs">
+                        <div class="main-h2-wrapper main-h2-wrapper_maxw880">
+                            <div class="allPlacesTabs__titles">
+                                <a
+                                    class="allPlacesTabs__title allPlacesTabs__title_shops infoTips  allPlacesTabs__title_active">
+                                    <span class="allPlaces__span">
+                                        Магазины
+                                    </span>
+                                    <span class="allPlaces__span">
+                                        47
+                                    </span>
+                                </a>
+                                <a class="allPlacesTabs__title allPlacesTabs__title_enter infoTips ">
+                                    <span class="allPlaces__span">
+                                        Развлечения
+                                    </span>
+                                    <span class="allPlaces__span">
+                                        4
+                                    </span>
+                                </a>
+                                <a class="allPlacesTabs__title allPlacesTabs__title_food infoTips ">
+                                    <span class="allPlaces__span">
+                                        Еда
+                                    </span>
+                                    <span class="allPlaces__span">
+                                        4
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="main-h2-wrapper__top-nav">
+                                <div class="main-h2-wrapper__arrows">
+                                    <div class="swiper-button-prev arrow-hidden-prev arrow-hidden-prev_shops"></div>
+                                    <div class="swiper-button-next arrow-hidden-next arrow-hidden-next_shops"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="allPlaces__body">
+                            <div class="allPlacesTabs__item">
+                                <div class="swiper shopSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="allPlacesTabs__item">
+                                <div class="swiper enterSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        2 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        2 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        2 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        2 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="allPlacesTabs__item">
+                                <div class="swiper foodSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        3 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        3 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        3 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class=" onlineServices-card">
+                                                <div class="onlineServices-card__top">
+                                                    <span class="promoTips onlineServices-card__top-item">
+                                                        <img src="img/sprites/i-discount.svg" alt="скидка">
+                                                        3 акции
+                                                    </span>
+                                                    
+                                                    <picture>
+                                                        <source srcset="img/services/1.webp">
+                                                        <img width="420" height="310" src="img/services/1.jpg"
+                                                            alt="онлайн-сервис" class="onlineServices__bg">
+                                                    </picture>
+                                                    <picture>
+                                                        <source srcset="img/services/1-logo.webp">
+                                                        <img width="96" height="96" src="img/services/1-logo.jpg"
+                                                            alt="онлайн-сервис логотип" class="onlineServices__logo">
+                                                    </picture>
+                                                </div>
+                                                <div class="onlineServices-card__content">
+                                                    <h3 class="onlineServices__h3">
+                                                        Пиццерия «Глобус»
+                                                    </h3>
+
+                                                    <p class="onlineServices__p">
+                                                        Кафе и рестораны
+                                                    </p>
+                                                    <div class="onlineServices__btns">
+                                                        <a class="btn btn_gray" href="#">
+                                                            <span>ТРЦ · 1 этаж</span>
+                                                        </a>
+                                                        <a class="btn btn_gray" href="#">
+                                                            <img class="btn__icon" width="18" height="18"
+                                                                src="img/sprites/i-geo.svg" alt="иконка гео">
+                                                            <span>На схеме</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__item">
+                <p class="footer__p">
+                    © ТРЦ «Глобус», 2022 <br>
+                    Киров, ул. Воровского 135
+                </p>
+            </div>
+            <div class="footer__item footer__social">
+                <a class="footer__social-link" href="#">
+                    <img width="40" height="40" class="footer__social-icon" src="img/social/tg.svg" alt="телеграм">
+                </a>
+                <a class="footer__social-link" href="#">
+                    <img width="40" height="40" class="footer__social-icon" src="img/social/vk.svg" alt="телеграм">
+                </a>
+                <a class="footer__social-link" href="#">
+                    <img width="40" height="40" class="footer__social-icon" src="img/social/wa.svg" alt="телеграм">
+                </a>
+                <a class="footer__social-link" href="#">
+                    <img width="40" height="40" class="footer__social-icon" src="img/social/viber.svg" alt="телеграм">
+                </a>
+            </div>
+            <div class="footer__item footer__item_confed">
+                <a class="footer__confed" href="#">
+                    Политика конфиденциальности
+                </a>
+                <br>
+                <a href="#" class="footer__confed">
+                    Обратная связь
+                </a>
+            </div>
+            <div class="footer__item">
+                <a class="footer__promo" href="#">
+                    <span class="footer__promo-span">
+                        Разработка <br>
+                        сайта
+                    </span>
+                    <img width="140" height="40" src="img/agancy-logo.svg" alt="промо лого">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div class="popup popup_main-popup hide">
+</div>
+
+    </div>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

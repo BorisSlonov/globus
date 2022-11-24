@@ -24,8 +24,6 @@
     background-color: #F5F7FA;
     max-width: 420px;
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
 
     &__img {
         border-radius: 15px;
@@ -41,6 +39,10 @@
 
     &__p {
         margin: 15px 0;
+    }
+
+    &__date_gray {
+        color: #808080;
     }
 }
 

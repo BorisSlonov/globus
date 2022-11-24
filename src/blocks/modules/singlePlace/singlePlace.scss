@@ -1,0 +1,75 @@
+.singlePlace {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 30% 70%;
+
+    
+    @media(max-width:1240px) {
+        grid-template-columns: 100%;
+        max-width: 100%;
+    }
+
+    .allPlaces__body {
+        width: 1124px;
+
+        @media(max-width:1240px) {
+            width: 100%;
+        }
+    }
+}
+
+.singlePlace__row {
+    margin-top: 20px;
+}
+
+.singlePlace__p {
+    font-size: 18px;
+    max-width: 680px;
+}
+
+.singlePlaceCard {
+    background-color: #F5F7FA;
+    border-radius: 24px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .onlineServices-card {
+        background-color: #F5F7FA;
+    }
+}
+
+.singlePlaceCard__tips {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.main-h2-wrapper_maxw880 {
+    max-width: 880px;
+}
+
+.singlePlaceCard__tip {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .btn {
+        width: 100%;
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+
+.singlePlaceCard__img {
+    width: 48px;
+}
+
+.singlePlaceCard__texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

@@ -1,47 +1,101 @@
-.main-form {
-  &__item {
+.form {
+  &__h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__input-wrapper {
     display: flex;
     flex-direction: column;
-    &:not(:first-child) {
-      margin-top: 20px;
+    gap: 15px;
+
+    &_row {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+
+      &:last-child {
+        margin-top: 30px;
+      }
     }
-    &:last-child {
-      margin-top: 40px;
+  }
+}
+
+.label-before {
+  line-height: 20px;
+  font-size: 12px;
+  top: 8px;
+  padding: 0 6px;
+  left: 9px;
+}
+
+.field {
+  width: 100%;
+  position: relative;
+
+  label::before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 56px;
+    font-size: 14px;
+    color: #777;
+    transition: 300ms all;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    padding: 30px 15px 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #222;
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-radius: 12px;
+    transition: 300ms all;
+
+    &:focus {
+      outline: 0;
+      border-color: rgba(102, 158, 222, 1);
+      background: #F0F7FF;
+    }
+
+    &:valid+label::before {
+      @extend .label-before;
+      content: attr(data-title);
+    }
+
+    &:focus+label::before {
+      @extend .label-before;
+      color: #808080;
+      font-size: 12px;
+    }
+  }
+}
+
+.input-file {
+  width: 100%;
+  border: 1px dashed #CCCCCC;
+  box-shadow: 0px 4px 12px rgba(31, 153, 133, 0.04);
+  border-radius: 12px;
+  padding: 32px 16px;
+  text-align: center;
+
+  &__p {
+    &_gray {
+      color: #B3B3B3;
     }
   }
 
-  &__input {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #000;
-    padding: 10px;
-    
-    &:focus,
-    &:active {
-      border-color: #000;
-    }
+  &__link {
+    color: var(--blue);
   }
-  &__txtarea {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #000;
-    padding: 10px 10px 15px;
-    
-    resize: none;
-    &:focus,
-    &:active {
-      border-color: #000;
-    }
-  }
-  ::placeholder {
-    
-  }
+}
 
-  @media (max-width: 767px) {
-    .btn {
-      width: 100%;
-    }
+.person-data {
+  font-size: 12px;
+  &__link {
+    color: var(--blue);
   }
 }

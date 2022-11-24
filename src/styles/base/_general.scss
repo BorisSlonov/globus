@@ -14,6 +14,11 @@ body {
   line-height: 1.6;
 }
 
+textarea {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -104,15 +109,15 @@ a:hover {
   transition: background-image 0.5s ease-in-out;
 
   &_0 {
-      background-image: url('../img/main-slider/bg.webp');
+    background-image: url('../img/main-slider/bg.webp');
   }
 
   &_1 {
-      background-image: url('../img/main-slider/bg2.webp');
+    background-image: url('../img/main-slider/bg2.webp');
   }
 
   &_2 {
-      background-image: url('../img/main-slider/bg3.webp');
+    background-image: url('../img/main-slider/bg3.webp');
   }
 
   &_sub {
@@ -211,6 +216,10 @@ a:hover {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+  @media(max-width:550px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &_blue {
     background: #F5F7FA;

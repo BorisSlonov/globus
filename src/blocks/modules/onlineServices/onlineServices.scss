@@ -19,6 +19,7 @@
     border-radius: 36px;
 }
 
+
 .onlineServices-card__top {
     position: relative;
     width: 100%;
@@ -68,6 +69,7 @@
         max-width: 18px;
     }
 }
+
 .onlineServices-card {
     background-color: #fff;
     border-radius: 36px;
@@ -96,4 +98,8 @@
     display: flex;
     gap: 15px;
     margin-top: 30px;
+}
+
+.onlineServices__tips_gray {
+    color: #808080;
 }
