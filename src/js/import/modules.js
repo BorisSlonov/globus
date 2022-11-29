@@ -5,5 +5,6 @@ import "%modules%/popups/popups";
 import "%modules%/accordion/accordion";
 import "%modules%/cinema/cinema";
 import "%modules%/datePicker/datePicker";
+import "%modules%/select/select";
 import "%modules%/allPlaces/allPlaces";
 import "%modules%/footer/footer";

@@ -210,22 +210,44 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  img {
+
+  svg {
     transition: all .2s;
   }
+
   &__a {
-    display: block;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     border-radius: 50%;
     transition: all .3s;
+    width:32px;
+    height: 32px;
+    svg use {
+      fill: #fff;
+    }
     &:hover {
-      background-color: #F5F7FA;
-      img {
-        transform: scale(1.1);
+      background-color: var(--orange);
+
+      svg use {
+        fill: #fff !important;
       }
     }
   }
+
+  
+  &_pc {
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+    svg use {
+      fill: #000 !important;
+    }
+  } 
 }
+
+
 @media(max-width:1150px) {
   .header__login-wrapper {
     display: none;

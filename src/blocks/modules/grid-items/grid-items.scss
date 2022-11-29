@@ -1,8 +1,32 @@
 .section-grid-items {
     padding: 60px 0;
 }
+
 .grid-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    @media(max-width:1023px) {
+        grid-template-columns: auto;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.shops-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.shops-filter__items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shops-filter__item_active {
+    background-color: #000;
+    color: #fff;
 }

@@ -48,3 +48,13 @@ if (servicesTabs) {
     "allPlacesTabs__title_active"
   );
 }
+
+const shopsTabs = document.querySelector(".shopsTabs");
+if (shopsTabs) {
+  tabs(
+    ".shops-filter",
+    ".shops-filter__item",
+    ".shopsTabs__item",
+    "shops-filter__item_active"
+  );
+}

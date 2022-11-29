@@ -7650,6 +7650,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     require-dir: ^1.2.0
     sass: ^1.49.9
     scroll-out: ^2.2.12
+    select: ^1.1.2
     splitting: ^1.0.6
     stylelint: ^14.5.3
     stylelint-config-standard-scss: ^3.0.0
@@ -12934,6 +12935,13 @@ bem-tools-create@bem-tools/bem-tools-create:
     seek-bunzip: bin/seek-bunzip
     seek-table: bin/seek-bzip-table
   checksum: c2ab3291e7085558499efd4e99d1466ee6782f6c4a4e4c417aa859e1cd2f5117fb3b5444f3d27c38ec5908c0f0312e2a0bc69dff087751f97b3921b5bde4f9ed
+  languageName: node
+  linkType: hard
+
+"select@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "select@npm:1.1.2"
+  checksum: 4346151e94f226ea6131e44e68e6d837f3fdee64831b756dd657cc0b02f4cb5107f867cb34a1d1216ab7737d0bf0645d44546afb030bbd8d64e891f5e4c4814e
   languageName: node
   linkType: hard
 

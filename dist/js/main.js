@@ -417,6 +417,34 @@ modalContent('.popup-btn', '.popup_main-popup');
 
 /***/ }),
 
+/***/ "./src/blocks/modules/select/select.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/select/select.js ***!
+  \*********************************************/
+/***/ (() => {
+
+// Change option selected
+var label = document.querySelector('.dropdown__filter-selected');
+var options = Array.from(document.querySelectorAll('.dropdown__select-option'));
+options.forEach(function (option) {
+  option.addEventListener('click', function () {
+    label.textContent = option.textContent;
+  });
+}); // Close dropdown onclick outside
+
+document.addEventListener('click', function (e) {
+  var toggle = document.querySelector('.dropdown__switch');
+  var element = e.target;
+  if (element == toggle) return;
+  var isDropdownChild = element.closest('.dropdown__filter');
+
+  if (!isDropdownChild) {
+    toggle.checked = false;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/tabs/tabs.js":
 /*!*****************************************!*\
   !*** ./src/blocks/modules/tabs/tabs.js ***!
@@ -465,6 +493,12 @@ if (servicesTabs) {
   tabs(".allPlacesTabs__titles", ".allPlacesTabs__title", ".allPlacesTabs__item", "allPlacesTabs__title_active");
 }
 
+var shopsTabs = document.querySelector(".shopsTabs");
+
+if (shopsTabs) {
+  tabs(".shops-filter", ".shops-filter__item", ".shopsTabs__item", "shops-filter__item_active");
+}
+
 /***/ }),
 
 /***/ "./src/js/import/components.js":
@@ -496,9 +530,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cinema_cinema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/cinema/cinema */ "./src/blocks/modules/cinema/cinema.js");
 /* harmony import */ var _modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/datePicker/datePicker */ "./src/blocks/modules/datePicker/datePicker.js");
 /* harmony import */ var _modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_datePicker_datePicker__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/allPlaces/allPlaces */ "./src/blocks/modules/allPlaces/allPlaces.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_select_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/select/select */ "./src/blocks/modules/select/select.js");
+/* harmony import */ var _modules_select_select__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_select_select__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_allPlaces_allPlaces__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/allPlaces/allPlaces */ "./src/blocks/modules/allPlaces/allPlaces.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 
