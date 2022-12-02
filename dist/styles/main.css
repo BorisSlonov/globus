@@ -2162,7 +2162,7 @@ background- .main-btn_green:hover {
   flex-direction: column;
   align-items: center;
   max-width: 40px;
-  bottom: 40px;
+  bottom: 80px;
 }
 
 .main-slider .swiper-button-next,
