@@ -8,16 +8,18 @@ options.forEach((option) => {
 	})
 })
 
-// Close dropdown onclick outside
-document.addEventListener('click', (e) => {
-	const toggle = document.querySelector('.dropdown__switch')
-	const element = e.target
+if (document.querySelector('.dropdown__switch')) {
+	// Close dropdown onclick outside
+	document.addEventListener('click', (e) => {
+		const toggle = document.querySelector('.dropdown__switch')
+		const element = e.target
 
-	if (element == toggle) return;
+		if (element == toggle) return;
 
-	const isDropdownChild = element.closest('.dropdown__filter')		
-	
-	if (!isDropdownChild) {
-		toggle.checked = false
-	}
-})
+		const isDropdownChild = element.closest('.dropdown__filter')
+
+		if (!isDropdownChild) {
+			toggle.checked = false
+		}
+	})
+}

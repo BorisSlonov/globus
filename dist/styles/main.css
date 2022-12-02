@@ -1719,13 +1719,13 @@ background- .main-btn_green:hover {
   font-weight: 500;
 }
 
+.header__link_shops,
 .header__link {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 16px;
   font-variation-settings: "wght" 500;
-  height: 100%;
   width: 100%;
   text-decoration: none;
   color: var(--black);
@@ -1895,6 +1895,128 @@ background- .main-btn_green:hover {
 }
 
 /* HEADER END   */
+
+.header__link_shops:hover + .hoverOpen {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+.header__link_time:hover + .hoverOpen {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+.hoverOpen:hover {
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+.hoverOpen {
+  position: absolute;
+  left: 0;
+  padding-top: 20px;
+  opacity: 0;
+  z-index: -1;
+  display: none;
+}
+
+.hoverOpen_time {
+  right: 0;
+  left: auto;
+  text-align: left;
+}
+
+.hoverOpen__list {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.hoverOpen__list_shops {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hoverOpen__list_time {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 300px;
+}
+
+.hoverOpen__a {
+  display: block;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  transition: all 0.3s;
+}
+
+.hoverOpen__a:hover {
+  background-color: rgb(245, 247, 250);
+  border-radius: 20px;
+}
+
+.header__link_shops {
+  position: relative;
+  padding-right: 20px;
+}
+
+.header__link_shops::before,
+.header__link_shops::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: var(--black);
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.header__link_shops::before {
+  transform: rotate(-45deg);
+  right: 2px;
+}
+
+.header__link_shops::after {
+  transform: rotate(45deg);
+  right: 8px;
+}
+
+.header__link_shops:hover::before {
+  transform: rotate(45deg);
+  background-color: var(--blue);
+}
+
+.header__link_shops:hover::after {
+  transform: rotate(-45deg);
+  background-color: var(--blue);
+}
+
+.hoverOpen__h4 {
+  position: relative;
+}
+
+.hoverOpen__h4-icon {
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+}
+
+.hoverOpen__h4-span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.hoverOpen__desc {
+  font-size: 14px;
+  color: #808080;
+}
 
 .btn {
   display: inline-flex;
@@ -3284,6 +3406,7 @@ img.cinema-sub-card__img {
     padding: 5px 10px;
   }
 
+  .header__link_shops,
   .header__link {
     color: #fff;
   }
@@ -3302,6 +3425,7 @@ img.cinema-sub-card__img {
     overflow: auto;
     transition: all 0.3s;
     background-color: var(--blue);
+    overflow-y: auto;
   }
 
   .main-menu {
@@ -3337,6 +3461,7 @@ img.cinema-sub-card__img {
     width: 100%;
   }
 
+  .header__link_shops,
   .header__link {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3361,7 +3486,6 @@ img.cinema-sub-card__img {
 
   .menu_active {
     padding-top: 80px;
-    overflow-y: hidden;
     left: 0;
   }
 
@@ -3431,6 +3555,44 @@ img.cinema-sub-card__img {
     transform: rotate(45deg);
     margin-bottom: 20px;
     height: 2px;
+  }
+
+  .hoverOpen {
+    position: relative;
+    display: none;
+  }
+
+  .hoverOpen__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__link_shops:hover + .hoverOpen {
+    opacity: 1;
+    z-index: 1;
+    display: block;
+  }
+
+  .header__link_time:hover + .hoverOpen {
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    opacity: 1;
+    z-index: 1;
+    display: block;
+  }
+
+  .hoverOpen:hover {
+    opacity: 1;
+    z-index: 1;
+    display: block;
+  }
+
+  .header__link_shops:hover::before {
+    background-color: #fff;
+  }
+
+  .header__link_shops:hover::after {
+    background-color: #fff;
   }
 
   .main-slider__content {
@@ -3640,6 +3802,14 @@ img.cinema-sub-card__img {
     font-size: 36px;
   }
 
+  .hoverOpen__a {
+    text-align: left;
+  }
+
+  .hoverOpen__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .btn_block-link {
     font-size: 14px;
     padding: 8px 12px;
@@ -3714,6 +3884,10 @@ img.cinema-sub-card__img {
   .main-h2-wrapper__top-nav {
     flex-direction: column-reverse;
     margin-bottom: -5px;
+  }
+
+  .hoverOpen__list {
+    grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
