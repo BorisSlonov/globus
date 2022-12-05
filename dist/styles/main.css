@@ -1869,8 +1869,8 @@ background- .main-btn_green:hover {
   align-items: center;
   border-radius: 50%;
   transition: all 0.3s;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
 }
 
 .nav-list__a svg use {
@@ -2107,7 +2107,6 @@ background- .main-btn_green:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
   height: 100%;
   transition: all 0.3s;
 }
@@ -2119,25 +2118,30 @@ background- .main-btn_green:hover {
   background-size: cover;
 }
 
-.section-page1_0 .section-page1_0_bg {
-  opacity: 1;
+.container_p0 {
+  padding: 0;
 }
 
-.section-page1_1 .section-page1_1_bg {
-  opacity: 1;
+.main-slider .container {
+  width: 100%;
 }
 
-.section-page1_2 .section-page1_2_bg {
-  opacity: 1;
+.main-slider .swiper-wrapper {
+  height: 100%;
 }
 
 .main-slider .swiper-slide {
-  height: 480px;
+  padding-top: 0px;
+  min-height: 560px;
   display: flex;
   align-items: center;
 }
 
 .main-slider .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
   max-width: 80px;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -2162,7 +2166,8 @@ background- .main-btn_green:hover {
   flex-direction: column;
   align-items: center;
   max-width: 40px;
-  bottom: 80px;
+  height: 0;
+  bottom: 160px;
 }
 
 .main-slider .swiper-button-next,
@@ -2210,7 +2215,7 @@ background- .main-btn_green:hover {
 .main-slider__content {
   position: relative;
   z-index: 10;
-  max-width: 50%;
+  max-width: calc(50% + 30px);
 }
 
 .main-slider__p {
