@@ -2095,7 +2095,6 @@ background- .main-btn_green:hover {
 
 .section-page1 {
   position: relative;
-  padding-top: 50px;
   background-repeat: no-repeat;
   -webkit-transition: background-image 0.5s ease-in-out;
   transition: background-image 0.5s ease-in-out;
@@ -2209,6 +2208,8 @@ background- .main-btn_green:hover {
 }
 
 .main-slider__content {
+  position: relative;
+  z-index: 10;
   max-width: 50%;
 }
 
