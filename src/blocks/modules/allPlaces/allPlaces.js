@@ -69,6 +69,29 @@ function initSwiper() {
             }
         }
     });
+
+    const servicesSwiper = new Swiper(".servicesSwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: ".arrow-hidden-next_services",
+            prevEl: ".arrow-hidden-prev_services",
+        },
+        breakpoints: {
+            // when window width is >= 480px
+            550: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is >= 640px
+            767: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
+    });
 }
 
 initSwiper();
@@ -88,9 +111,14 @@ document.querySelectorAll('.allPlacesTabs__title').forEach((i) => {
                     document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
                     document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops')
 
+                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                        i.classList.remove('allPlaces__link_active')
+                    })
+                    document.querySelector('.allPlaces__link_shops').classList.add('allPlaces__link_active')
+
                     setTimeout(() => {
                         initSwiper();
-                    }, "500")
+                    }, "200")
 
                 }
                 if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
@@ -102,9 +130,14 @@ document.querySelectorAll('.allPlacesTabs__title').forEach((i) => {
                     document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
                     document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter')
 
+                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                        i.classList.remove('allPlaces__link_active')
+                    })
+                    document.querySelector('.allPlaces__link_enter').classList.add('allPlaces__link_active')
+
                     setTimeout(() => {
                         initSwiper();
-                    }, "500")
+                    }, "200")
                 }
                 if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
                     document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
@@ -115,16 +148,21 @@ document.querySelectorAll('.allPlacesTabs__title').forEach((i) => {
                     document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
                     document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food')
 
+                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                        i.classList.remove('allPlaces__link_active')
+                    })
+                    document.querySelector('.allPlaces__link_food').classList.add('allPlaces__link_active')
+
                     setTimeout(() => {
                         initSwiper();
-                    }, "500")
+                    }, "200")
                 }
             }
 
 
             initSwiper();
 
-        }, 600);
+        }, 100);
 
     })
 

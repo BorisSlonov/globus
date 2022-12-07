@@ -944,6 +944,10 @@ a:hover {
   display: block;
 }
 
+.main_pt0 {
+  padding-top: 0;
+}
+
 .main-btn {
   display: inline-block;
   padding: 15px 30px;
@@ -2100,6 +2104,19 @@ background- .main-btn_green:hover {
   transition: background-image 0.5s ease-in-out;
 }
 
+.section-page1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #fff;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  z-index: 100;
+}
+
 .section-page1__bg {
   object-fit: cover;
   position: absolute;
@@ -2116,6 +2133,12 @@ background- .main-btn_green:hover {
   padding-bottom: 80px;
   background-image: url("../img/subpages-title-bg.webp");
   background-size: cover;
+}
+
+.section-page1_sub_no_bg {
+  background-image: none;
+  padding-top: 80px;
+  padding-bottom: 0;
 }
 
 .container_p0 {
@@ -2518,6 +2541,106 @@ img.cinema-sub-card__img {
 
 .allPlacesTabs__title_active .allPlaces__span:first-child {
   color: #fff;
+}
+
+.allPlaces__link {
+  display: none;
+}
+
+.allPlaces__link_active {
+  display: block;
+}
+
+.shopCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.shopCard__top {
+  flex-basis: 50%;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #fff;
+}
+
+.shopCard:hover .shopCard__bottom {
+  top: 0;
+}
+
+.shopCard__bottom {
+  transition: all 0.5s;
+  flex-basis: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #F5F7FA;
+  overflow: auto;
+}
+
+.shopCard__discount {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  width: 100%;
+  max-width: 120px;
+  text-align: center;
+  background-color: #F5F7FA;
+  border-radius: 50px;
+}
+
+.shopCard__discount img {
+  max-width: 20px;
+}
+
+.shopCard__content img {
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+.shopCard__title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shopCard__counter {
+  text-align: center;
+  color: #808080;
+  margin-top: 12px;
+}
+
+.shopCard__ul {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shopCard__a_right-dot {
+  position: relative;
+}
+
+.shopCard__a_right-dot::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--orange);
 }
 
 .onlineServices__body {
@@ -3313,14 +3436,40 @@ img.cinema-sub-card__img {
 }
 
 .footer {
+  position: relative;
   background-image: url("../img/footer-bg.png");
-  padding: 50px 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 82px 0 50px;
   font-size: 14px;
+}
+
+.footer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  background-color: #fff;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  z-index: 100;
+}
+
+.footer_gray-rounded:after {
+  content: "";
+  background-color: #F5F7FA;
 }
 
 .footer__body {
   display: flex;
   justify-content: space-between;
+}
+
+.main_pt0 + .footer:after {
+  content: "";
+  background-color: #F5F7FA;
 }
 
 .footer__social {
