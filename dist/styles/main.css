@@ -2643,6 +2643,20 @@ img.cinema-sub-card__img {
   background-color: var(--orange);
 }
 
+.shopSwiper .swiper-wrapper {
+  margin-bottom: 20px;
+}
+
+.shopSwiper .swiper-scrollbar {
+  z-index: 200;
+  bottom: 0;
+  height: 8px;
+}
+
+.shopSwiper .swiper-scrollbar-drag {
+  background-color: var(--blue);
+}
+
 .onlineServices__body {
   display: flex;
   gap: 25px;

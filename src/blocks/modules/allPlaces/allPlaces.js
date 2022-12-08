@@ -12,6 +12,10 @@ function initSwiper() {
             nextEl: ".arrow-hidden-next_shops",
             prevEl: ".arrow-hidden-prev_shops",
         },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+          },
         breakpoints: {
             // when window width is >= 480px
             550: {
