@@ -3,11 +3,12 @@
     background-repeat: no-repeat;
     -webkit-transition: background-image 0.5s ease-in-out;
     transition: background-image 0.5s ease-in-out;
+
     &::after {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;    
+        left: 0;
         right: 0;
         height: 50px;
         background-color: #fff;
@@ -38,7 +39,7 @@
         background-size: cover;
 
         &_no_bg {
-            background-image:none;
+            background-image: none;
             padding-top: 80px;
             padding-bottom: 0;
         }
@@ -130,6 +131,14 @@
                 background-position: 50% 50%;
                 width: 40px;
                 height: 40px;
+                transition: all .3s;
+            }
+
+            &:hover {
+                &::after {
+                    background-image: url('../img/sprites/slider-arrow-left-active.svg');
+
+                }
             }
         }
 
@@ -142,6 +151,14 @@
                 background-position: 50% 50%;
                 width: 40px;
                 height: 40px;
+                transition: all .3s;
+            }
+
+            &:hover {
+                &::after {
+                    background-image: url('../img/sprites/slider-arrow-right-active.svg');
+
+                }
             }
         }
     }
@@ -160,5 +177,39 @@
         font-size: 18px;
         max-width: 440px;
         margin-top: 15px;
+    }
+}
+
+.swiper-scrollbar-drag {
+    position: relative;
+    background-color: transparent;
+
+    @media(max-width:767px) {
+        display: none !important;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 10px;
+        left: -1000px;
+        width: 1000px;
+        background-color: var(--blue);
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -10px;
+        transform: scale(2);
+        left: -18px;
+        cursor: pointer;
+        width: 64px;
+        height: 40px;
+        background-image: url('../img/slider-drag.svg');
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
     }
 }
