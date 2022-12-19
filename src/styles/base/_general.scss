@@ -133,6 +133,17 @@ a:hover {
   }
 }
 
+.swiper-button-prev_cinema {
+  &::after {
+    background-image: url('../img/sprites/arrow-left-grey.svg') !important;
+  }
+}
+.swiper-button-next_cinema {
+  &::after {
+    background-image: url('../img/sprites/arrow-right-grey.svg') !important;
+  }
+}
+
 
 .main-h2-wrapper__arrows {
   position: relative;

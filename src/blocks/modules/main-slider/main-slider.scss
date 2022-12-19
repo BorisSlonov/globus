@@ -180,10 +180,15 @@
     }
 }
 
+.swiper-scrollbar {
+    background-color: var(--blue);
+}
 .swiper-scrollbar-drag {
     position: relative;
-    background-color: transparent;
-
+    // background-color: transparent;
+    background-color: var(--blue);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     @media(max-width:767px) {
         display: none !important;
     }
@@ -191,10 +196,12 @@
     &::before {
         content: '';
         position: absolute;
-        height: 10px;
-        left: -1000px;
-        width: 1000px;
-        background-color: var(--blue);
+        height: 8px;
+        right: -1500px;
+        width: 1500px;
+        background-color: #ccc;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
     }
 
     &::after {
@@ -203,7 +210,7 @@
         position: absolute;
         top: -10px;
         transform: scale(2);
-        left: -18px;
+        right: -18px;
         cursor: pointer;
         width: 64px;
         height: 40px;
