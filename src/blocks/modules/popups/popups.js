@@ -50,4 +50,4 @@ function modalContent(trigger, item) {
     }
  
 }
-modalContent('.popup-btn', '.popup_main-popup');
+modalContent('.popup-btn', '.popup_shop-popup');

@@ -2827,11 +2827,19 @@ img.cinema-sub-card__img {
 .shops-filter {
   display: flex;
   align-items: center;
+}
+
+.shops-filter-shops {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
 .shops-filter__items {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 15px;
 }
@@ -3073,85 +3081,139 @@ img.cinema-sub-card__img {
   font-size: 24px;
 }
 
-.dropdown {
+/* The container must be positioned relative: */
+
+.custom-select {
   position: relative;
-  z-index: 1000;
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  max-width: 300px;
+  width: 320px;
 }
 
-.dropdown__switch:checked + .dropdown__options-filter .dropdown__select {
-  transform: scaleY(1);
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
 }
 
-.dropdown__switch:checked + .dropdown__options-filter .dropdown__filter:after {
-  transform: rotate(-135deg);
+.select-selected {
+  border-radius: 25px;
+  transition: all 0.3s;
+  border: 1px solid rgb(229, 229, 229);
 }
 
-.dropdown__options-filter {
-  width: 100%;
+.select-selected:hover {
+  background-color: rgb(240, 247, 255);
+  border: 1px solid rgb(77, 160, 255);
+}
+
+/* Style the arrow inside the select element: */
+
+.select-selected::before,
+.select-selected::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: var(--black);
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.select-selected::before {
+  transform: rotate(-45deg);
+  right: 8px;
+}
+
+.select-selected:hover::before {
+  transform: rotate(45deg);
+  background-color: var(--blue);
+}
+
+.select-selected::after {
+  transform: rotate(45deg);
+  right: 14px;
+}
+
+.select-selected:hover::after {
+  transform: rotate(-45deg);
+  background-color: var(--blue);
+}
+
+/* style the items (options), including the selected item: */
+
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
   cursor: pointer;
 }
 
-.dropdown__filter {
-  position: relative;
+/* Style items (options): */
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 25px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #808080;
-  padding: 8px 16px;
-  background-color: #fff;
-  border: 1px solid #d6d6d6;
-  border-radius: 30px;
-  font-size: 14px;
-  transition: 0.3s;
+  border-radius: 12px;
+  transition: all 0.3s;
 }
 
-.dropdown__filter:focus {
-  border: 1px solid #918FF4;
-  outline: none;
+.select-items div:not(:first-child) {
+  margin-top: 4px;
 }
 
-.dropdown__filter::after {
-  right: 20px;
+.select-items div:hover {
+  background-color: #F5F7FA;
+}
+
+/* Hide the items when the select box is closed: */
+
+.select-hide {
+  display: none;
+}
+
+.same-as-selected {
+  background-color: #F5F7FA;
+  transition: all 0.3s;
+}
+
+.select-items div::before {
   content: "";
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #808080;
-  border-bottom: 2px solid #808080;
-  transform: rotate(45deg) translateX(-45%);
-  transition: 0.2s ease-in-out;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/sprites/i-check.svg");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transform: scale(0);
 }
 
-.dropdown__select {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  margin-top: 5px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
-  transform: scaleY(0);
-  transform-origin: top;
-  font-weight: 300;
-  transition: 0.2s ease-in-out;
+.same-as-selected::before {
+  transform: scale(1) !important;
+  transition: all 0.3s;
 }
 
-.dropdown__select-option {
-  padding: 20px;
-  background-color: #fff;
-  border-bottom: 1px solid #d6d6d6;
-  transition: 0.3s;
+.same-as-selected:hover {
+  background-color: var(--blue) !important;
+  color: #fff;
 }
 
-.dropdown__select-option:last-of-type {
-  border-bottom: 0;
+.same-as-selected:hover::before {
+  width: 0;
 }
 
-.dropdown__select-option:hover {
-  background-color: #f9f9f9;
+.custom-select-wrapper {
+  display: flex;
+  gap: 15px;
 }
 
 .accordion {
@@ -3861,6 +3923,10 @@ img.cinema-sub-card__img {
     grid-template-columns: 1fr;
   }
 
+  .custom-select {
+    width: 240px;
+  }
+
   .footer__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3951,6 +4017,11 @@ img.cinema-sub-card__img {
     margin-bottom: 60px;
   }
 
+  .main-h2-wrapper_filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .swiper-scrollbar-drag {
     display: none !important;
   }
@@ -4004,6 +4075,10 @@ img.cinema-sub-card__img {
   }
 
   .rent-form {
+    flex-direction: column;
+  }
+
+  .custom-select-wrapper {
     flex-direction: column;
   }
 
@@ -4134,8 +4209,16 @@ img.cinema-sub-card__img {
     margin-bottom: -5px;
   }
 
+  .main-h2-wrapper_filter {
+    align-items: flex-start;
+  }
+
   .hoverOpen__list {
     grid-template-columns: 1fr;
+  }
+
+  .shops-filter-shops {
+    flex-direction: column;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

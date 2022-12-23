@@ -1,81 +1,142 @@
-.dropdown {
+/* The container must be positioned relative: */
+.custom-select {
   position: relative;
-  z-index: 1000;
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  max-width: 300px;
+  width: 320px;
 
-
-  &__switch:checked+&__options-filter &__select {
-    transform: scaleY(1);
+  @media(max-width:1023px) {
+    width: 240px;
   }
+}
 
-  &__switch:checked+&__options-filter &__filter:after {
-    transform: rotate(-135deg);
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  border-radius: 25px;
+  transition: all .3s;
+  border: 1px solid rgb(229, 229, 229);
+
+}
+
+.select-selected:hover {
+  background-color: rgba(240, 247, 255, 1);
+  border: 1px solid rgba(77, 160, 255, 1);
+}
+
+/* Style the arrow inside the select element: */
+
+.select-selected::before,
+.select-selected::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: var(--black);
+  top: 50%;
+  transition: all 0.3s;
+}
+
+.select-selected::before {
+  transform: rotate(-45deg);
+  right: 8px;
+}
+
+.select-selected:hover::before {
+  transform: rotate(45deg);
+  background-color: var(--blue);
+}
+
+
+.select-selected::after {
+  transform: rotate(45deg);
+  right: 14px;
+}
+
+.select-selected:hover::after {
+  transform: rotate(-45deg);
+  background-color: var(--blue);
+}
+
+
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 25px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  transition: all .3s;
+}
+
+.select-items div:not(:first-child) {
+  margin-top: 4px;
+}
+
+.select-items div:hover {
+  background-color: #F5F7FA;
+
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.same-as-selected {
+  background-color: #F5F7FA;
+  transition: all .3s;
+}
+
+.select-items div::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: url('../img/sprites/i-check.svg');
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transform: scale(0);
+}
+
+.same-as-selected::before {
+  transform: scale(1) !important;
+  transition: all .3s;
+}
+
+.same-as-selected:hover {
+  background-color: var(--blue) !important;
+  color: #fff;
+
+  &::before {
+    width: 0;
   }
+}
 
-  &__options-filter {
-    width: 100%;
-    cursor: pointer;
-  }
-
-  &__filter {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #808080;
-    padding: 8px 16px;
-    background-color: #fff;
-    border: 1px solid #d6d6d6;
-    border-radius: 30px;
-    font-size: 14px;
-    transition: .3s;
-
-    &:focus {
-      border: 1px solid #918FF4;
-      outline: none;
-    }
-
-    &::after {
-      right: 20px;
-      content: '';
-      width: 8px;
-      height: 8px;
-      border-right: 2px solid #808080;
-      border-bottom: 2px solid #808080;
-      transform: rotate(45deg) translateX(-45%);
-      transition: .2s ease-in-out;
-    }
-  }
-
-  &__select {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    margin-top: 5px;
-    overflow: hidden;
-    box-shadow: 0 5px 10px 0 rgba(152, 152, 152, 0.6);
-    transform: scaleY(0);
-    transform-origin: top;
-    font-weight: 300;
-    transition: .2s ease-in-out;
-  }
-
-  &__select-option {
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #d6d6d6;
-    transition: .3s;
-
-    &:last-of-type {
-      border-bottom: 0;
-    }
-
-    &:hover {
-      background-color: #f9f9f9;
-    }
+.custom-select-wrapper {
+  display: flex;
+  gap: 15px;
+  @media(max-width:767px) {
+    flex-direction: column;
   }
 }
