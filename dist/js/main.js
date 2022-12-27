@@ -147,63 +147,74 @@ function initSwiper() {
 }
 
 initSwiper();
-document.querySelectorAll('.allPlacesTabs__title').forEach(function (i) {
-  i.addEventListener('click', function () {
-    setTimeout(function () {
-      if (document.querySelector('.arrow-hidden-prev')) {
-        if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
-          document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
-          document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops');
-          document.querySelectorAll('.allPlaces__link').forEach(function (i) {
-            i.classList.remove('allPlaces__link_active');
-          });
-          document.querySelector('.allPlaces__link_shops').classList.add('allPlaces__link_active');
-          setTimeout(function () {
-            initSwiper();
-          }, "200");
+
+if (document.querySelector('.allPlacesTabs__title')) {
+  document.querySelectorAll('.allPlacesTabs__title').forEach(function (i) {
+    i.addEventListener('click', function () {
+      setTimeout(function () {
+        if (document.querySelector('.arrow-hidden-prev')) {
+          if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
+            document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
+            document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops');
+            document.querySelectorAll('.allPlaces__link').forEach(function (i) {
+              i.classList.remove('allPlaces__link_active');
+            });
+            document.querySelector('.allPlaces__link_shops').classList.add('allPlaces__link_active');
+            setTimeout(function () {
+              initSwiper();
+            }, "200");
+          }
+
+          if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
+            document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
+            document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter');
+            document.querySelectorAll('.allPlaces__link').forEach(function (i) {
+              i.classList.remove('allPlaces__link_active');
+            });
+
+            if (document.querySelector('.allPlaces__link_enter')) {
+              document.querySelector('.allPlaces__link_enter').classList.add('allPlaces__link_active');
+            }
+
+            setTimeout(function () {
+              initSwiper();
+            }, "200");
+          }
+
+          if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
+            document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
+            document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
+            document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
+            document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food');
+            document.querySelectorAll('.allPlaces__link').forEach(function (i) {
+              i.classList.remove('allPlaces__link_active');
+            });
+
+            if (document.querySelector('.allPlaces__link_food')) {
+              document.querySelector('.allPlaces__link_food').classList.add('allPlaces__link_active');
+            }
+
+            setTimeout(function () {
+              initSwiper();
+            }, "200");
+          }
         }
 
-        if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food');
-          document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food');
-          document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter');
-          document.querySelectorAll('.allPlaces__link').forEach(function (i) {
-            i.classList.remove('allPlaces__link_active');
-          });
-          document.querySelector('.allPlaces__link_enter').classList.add('allPlaces__link_active');
-          setTimeout(function () {
-            initSwiper();
-          }, "200");
-        }
-
-        if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter');
-          document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops');
-          document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter');
-          document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops');
-          document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food');
-          document.querySelectorAll('.allPlaces__link').forEach(function (i) {
-            i.classList.remove('allPlaces__link_active');
-          });
-          document.querySelector('.allPlaces__link_food').classList.add('allPlaces__link_active');
-          setTimeout(function () {
-            initSwiper();
-          }, "200");
-        }
-      }
-
-      initSwiper();
-    }, 100);
+        initSwiper();
+      }, 100);
+    });
   });
-});
+}
 
 /***/ }),
 
@@ -345,57 +356,13 @@ var swiperMain = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.mai
 /*!*********************************************!*\
   !*** ./src/blocks/modules/popups/popups.js ***!
   \*********************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function modalContent(trigger, item) {
-  var btn = document.querySelectorAll(trigger),
-      pop = document.querySelector(item),
-      close = document.querySelectorAll('.popup-close'),
-      closeBack = document.querySelectorAll('.popup'),
-      activeClass = 'show',
-      hideClass = 'hide';
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fancyapps/fancybox */ "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js");
+/* harmony import */ var _fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_0__);
 
-  function showContent() {
-    pop.classList.add(activeClass);
-    pop.classList.remove(hideClass);
-    document.body.style.overflow = 'hidden';
-    window.dispatchEvent(new CustomEvent('resize'));
-  }
-
-  function hideContent() {
-    pop.classList.remove(activeClass);
-    pop.classList.add(hideClass);
-    document.body.style.overflow = '';
-  }
-
-  function showHideContent(trigger, func) {
-    trigger.forEach(function (item) {
-      item.addEventListener('click', function (e) {
-        if (e.target && e.target.className === item.className) {
-          e.preventDefault();
-          func();
-        }
-      });
-    });
-  }
-
-  showHideContent(btn, showContent);
-  showHideContent(close, hideContent);
-  showHideContent(closeBack, hideContent);
-
-  function hideScroll() {
-    var div = document.createElement('div');
-    document.body.append(div);
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.overflowY = 'scroll';
-    div.style.visibility = 'hidden';
-    var result = div.offsetWidth - div.clientWidth;
-    return result;
-  }
-}
-
-modalContent('.popup-btn', '.popup_shop-popup');
 
 /***/ }),
 
@@ -586,7 +553,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
 /* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _modules_popups_popups__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/popups/popups */ "./src/blocks/modules/popups/popups.js");
-/* harmony import */ var _modules_popups_popups__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_popups_popups__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/accordion/accordion */ "./src/blocks/modules/accordion/accordion.js");
 /* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_cinema_cinema__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/cinema/cinema */ "./src/blocks/modules/cinema/cinema.js");

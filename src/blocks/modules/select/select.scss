@@ -40,7 +40,7 @@
 
 .select-selected::before {
   transform: rotate(-45deg);
-  right: 8px;
+  right: 10px;
 }
 
 .select-selected:hover::before {
@@ -51,7 +51,7 @@
 
 .select-selected::after {
   transform: rotate(45deg);
-  right: 14px;
+  right: 16px;
 }
 
 .select-selected:hover::after {

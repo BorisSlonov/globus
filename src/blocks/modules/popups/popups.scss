@@ -1,92 +1,64 @@
 .popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.7);
-  transition: all 0.3s;
-}
-
-.hide {
-  display: none;
-  z-index: -1;
-  .main-popup {
-    transform: translateY(70%);
-    opacity: 0;
-  }
-}
-
-.show {
-  z-index: 2000;
-  .main-popup {
-    transition: all 0.3s;
-
-    transform: translate(0);
-  }
-}
-
-.popup-close {
-  cursor: pointer;
-  &_esc {
-    position: relative;
-    width: 24px;
-    height: 24px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 2px;
-      left: 4px;
-      top: 11px;
-      transition: all 0.3s;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover {
-      &::before,
-      &::after {
-        background-color: #000;
-      }
-    }
-  }
-}
-
-.main-popup {
-  width: 100%;
-  max-width: 800px;
-  background-color: #000;
-  padding: 20px;
-  margin: 0 15px;
-  border-radius: 10px;
-
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__body {
-    margin-top: 40px;
-    overflow-y: auto;
-  }
-
-  .main-btn {
+    padding: 0 !important;
     width: 100%;
-  }
+    max-width: 700px !important;
+    border-radius: 25px;
+    background-color: #F5F7FA;
+}
+
+.popup__header {
+    position: relative;
+    height: 300px;
+    border-radius: 25px;
+}
+
+.popup__bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.popup__logo {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 25px;
+    bottom: 25px;
+    border: 2px solid #fff;
+}
+
+.popup__body {
+    padding: 40px 30px;
+}
+
+.fancybox-button svg path {
+    fill: #fff !important;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+    border-radius: 50%;
+    background-color: #000;
+    top: 10px !important;
+    right: 10px !important;
+}
+
+.popup__h3 {
+    font-size: 32px;
+}
+
+.popup__p {
+    font-size: 18px;
+}
+
+.popup__p:not(:first-child) {
+    margin-top: 12px;
+}
+
+.popup__btn-wrapper {
+    margin-top: 16px;
 }

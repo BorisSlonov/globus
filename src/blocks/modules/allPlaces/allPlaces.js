@@ -15,7 +15,7 @@ function initSwiper() {
         scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
-          },
+        },
         breakpoints: {
             // when window width is >= 480px
             550: {
@@ -100,74 +100,80 @@ function initSwiper() {
 
 initSwiper();
 
+if (document.querySelector('.allPlacesTabs__title')) {
+    document.querySelectorAll('.allPlacesTabs__title').forEach((i) => {
+        i.addEventListener('click', () => {
+            setTimeout(function () {
 
-document.querySelectorAll('.allPlacesTabs__title').forEach((i) => {
-    i.addEventListener('click', () => {
-        setTimeout(function () {
+                if (document.querySelector('.arrow-hidden-prev')) {
+                    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
+                        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops')
 
-            if (document.querySelector('.arrow-hidden-prev')) {
-                if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_shops')) {
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
-                    document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_shops')
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
+                        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops')
 
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
-                    document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_shops')
+                        document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                            i.classList.remove('allPlaces__link_active')
+                        })
+                        document.querySelector('.allPlaces__link_shops').classList.add('allPlaces__link_active')
 
-                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
-                        i.classList.remove('allPlaces__link_active')
-                    })
-                    document.querySelector('.allPlaces__link_shops').classList.add('allPlaces__link_active')
+                        setTimeout(() => {
+                            initSwiper();
+                        }, "200")
 
-                    setTimeout(() => {
-                        initSwiper();
-                    }, "200")
+                    }
+                    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
+                        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter')
 
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
+                        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter')
+
+                        document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                            i.classList.remove('allPlaces__link_active')
+                        })
+                        if (document.querySelector('.allPlaces__link_enter')) {
+                            document.querySelector('.allPlaces__link_enter').classList.add('allPlaces__link_active')
+                        }
+
+                        setTimeout(() => {
+                            initSwiper();
+                        }, "200")
+                    }
+                    if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
+                        document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
+                        document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food')
+
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
+                        document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
+                        document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food')
+
+                        document.querySelectorAll('.allPlaces__link').forEach((i) => {
+                            i.classList.remove('allPlaces__link_active')
+                        })
+
+                        if (document.querySelector('.allPlaces__link_food')) {
+                            document.querySelector('.allPlaces__link_food').classList.add('allPlaces__link_active')
+                        }
+
+                        setTimeout(() => {
+                            initSwiper();
+                        }, "200")
+                    }
                 }
-                if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_enter')) {
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_food')
-                    document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_enter')
-
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_food')
-                    document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_enter')
-
-                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
-                        i.classList.remove('allPlaces__link_active')
-                    })
-                    document.querySelector('.allPlaces__link_enter').classList.add('allPlaces__link_active')
-
-                    setTimeout(() => {
-                        initSwiper();
-                    }, "200")
-                }
-                if (document.querySelector('.allPlacesTabs__title_active').classList.contains('allPlacesTabs__title_food')) {
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_enter')
-                    document.querySelector('.arrow-hidden-prev').classList.remove('arrow-hidden-prev_shops')
-                    document.querySelector('.arrow-hidden-prev').classList.add('arrow-hidden-prev_food')
-
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_enter')
-                    document.querySelector('.arrow-hidden-next').classList.remove('arrow-hidden-next_shops')
-                    document.querySelector('.arrow-hidden-next').classList.add('arrow-hidden-next_food')
-
-                    document.querySelectorAll('.allPlaces__link').forEach((i) => {
-                        i.classList.remove('allPlaces__link_active')
-                    })
-                    document.querySelector('.allPlaces__link_food').classList.add('allPlaces__link_active')
-
-                    setTimeout(() => {
-                        initSwiper();
-                    }, "200")
-                }
-            }
 
 
-            initSwiper();
+                initSwiper();
 
-        }, 100);
+            }, 100);
+
+        })
 
     })
-
-})
+}

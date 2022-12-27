@@ -32,6 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="body scroll-block">
@@ -536,375 +537,339 @@
                 </div>
                 <div class="allPlaces__body">
                     <div class="allPlacesTabs__item">
-                        <div class="grid-items">
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
+                        <div class="news">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="news__item news-card-full">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/2.jpg">
                                         <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
                                     </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
-                                    <picture>
-                                        <source srcset="img/news/1.jpg">
-                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
-                                    </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
+                             
+                                <div class="news-card-full__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <div>
+                                        <p class="news-card-full__p">
+                                            Summer sale
                                         </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
+                                        <p class="news-card-full__p italic">
+                                            -50%
+                                        </p>
+                                        <span class="news-card-full__p-min">
+                                            мужская одежда
                                         </span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
-                                    <picture>
-                                        <source srcset="img/news/2.jpg">
-                                        <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
-                                    </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="allPlacesTabs__item">
-                        <div class="grid-items">
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                        <div class="news">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
+                            <div class="news__item news-card-full">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/2.jpg">
                                         <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
                                     </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
-                                    <picture>
-                                        <source srcset="img/news/1.jpg">
-                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
-                                    </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
+                             
+                                <div class="news-card-full__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <div>
+                                        <p class="news-card-full__p">
+                                            Summer sale
                                         </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
+                                        <p class="news-card-full__p italic">
+                                            -50%
+                                        </p>
+                                        <span class="news-card-full__p-min">
+                                            мужская одежда
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
-                                    <picture>
-                                        <source srcset="img/news/2.jpg">
-                                        <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
-                                    </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="allPlacesTabs__item">
-                        <div class="grid-items">
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                        <div class="news">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
+                            <div class="news__item news-card-full">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/2.jpg">
                                         <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
                                     </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
-                                    <picture>
-                                        <source srcset="img/news/2.jpg">
-                                        <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
-                                    </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
-                                    <picture>
-                                        <source srcset="img/news/1.jpg">
-                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
-                                    </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
+                             
+                                <div class="news-card-full__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <div>
+                                        <p class="news-card-full__p">
+                                            Summer sale
                                         </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
+                                        <p class="news-card-full__p italic">
+                                            -50%
+                                        </p>
+                                        <span class="news-card-full__p-min">
+                                            мужская одежда
                                         </span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card-full">
-                                    <picture>
-                                        <source srcset="img/news/2.jpg">
-                                        <img src="img/news/2.webp" alt="фото к новости" class="news-card-full__img">
-                                    </picture>
-                                    <div class="news-card-full__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <div>
-                                            <p class="news-card-full__p">
-                                                Summer sale
-                                            </p>
-                                            <p class="news-card-full__p italic">
-                                                -50%
-                                            </p>
-                                            <span class="news-card-full__p-min">
-                                                мужская одежда
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-items__item">
-                                <div class="news__item news-card">
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
                                     <picture>
                                         <source srcset="img/news/1.jpg">
                                         <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
                                     </picture>
-                                    <div class="news-card__content">
-                                        <span class="infoTips">MODNAYA-YA</span>
-                                        <p class="news-card__p">
-                                            Большое новое поступление осенней коллекции
-                                        </p>
-                                        <span class="news-card__date">
-                                            20 июня 2022
-                                        </span>
-                                    </div>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
                                 </div>
                             </div>
-                            
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="news__item news-card" data-fancybox data-src="#infoPopup">
+                                <div class="news-card__img-wrapper">
+                                    <picture>
+                                        <source srcset="img/news/1.jpg">
+                                        <img src="img/news/1.webp" alt="фото к новости" class="news-card__img">
+                                    </picture>
+                                </div>
+                                <div class="news-card__content">
+                                    <span class="infoTips">MODNAYA-YA</span>
+                                    <p class="news-card__p">
+                                        Большое новое поступление осенней коллекции
+                                    </p>
+                                    <span class="news-card__date">
+                                        20 июня 2022
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -957,14 +922,38 @@
         </div>
     </div>
 </footer>
-        <div class="popup popup_shop-popup hide">
+        <div id="infoPopup" class="popup popup_shop-popup">
+    <div class="popup__header">
+        <img class="popup__bg" src="https://via.placeholder.com/300" alt="">
+        <img class="popup__logo" src="https://via.placeholder.com/150" alt="">
+    </div>
     <div class="popup__body">
-
+        <h3 class="popup__h3">
+            Заголовок
+        </h3>
+        <p class="popup__p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum eveniet voluptatibus quos
+            sapiente rem, illum aspernatur excepturi atque numquam! Qui incidunt quia doloribus, necessitatibus aliquid
+            eum explicabo. Velit, est.
+            Facilis amet blanditiis beatae ipsam nemo esse totam maxime voluptas, accusantium deserunt excepturi error
+            asperiores a voluptate iure cumque magnam fuga alias id quod! Delectus, esse quae. Blanditiis, corporis id!
+        </p>
+        <p class="popup__p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptatum eveniet voluptatibus quos
+            sapiente rem, illum aspernatur excepturi atque numquam! Qui incidunt quia doloribus, necessitatibus aliquid
+            eum explicabo. Velit, est.
+            Facilis amet blanditiis beatae ipsam nemo esse totam maxime voluptas, accusantium deserunt excepturi error
+            asperiores a voluptate iure cumque magnam fuga alias id quod! Delectus, esse quae. Blanditiis, corporis id!
+        </p>
+        <div class="popup__btn-wrapper">
+            <a href="#" class="btn btn_block-link">Перейти к магазину</a>
+        </div>
     </div>
 </div>
-
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
 </body>
