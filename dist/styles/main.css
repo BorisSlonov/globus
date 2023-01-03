@@ -3516,6 +3516,7 @@ img.cinema-sub-card__img {
   top: 0;
   right: 0;
   left: 0;
+  object-fit: cover;
 }
 
 .popup__logo {
@@ -3525,6 +3526,8 @@ img.cinema-sub-card__img {
   left: 25px;
   bottom: 25px;
   border: 2px solid #fff;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .popup__body {
